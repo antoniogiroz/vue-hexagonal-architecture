@@ -8,9 +8,9 @@ async function save(book: Book): Promise<void> {
   localStorage.setItem('books', JSON.stringify(Array.from(books.entries())));
 }
 
-async function get(id: string): Promise<Book | null> {
+async function get(isbn: string): Promise<Book | null> {
   const books = getAllFromLocalStorage();
-  const book = books.get(id);
+  const book = books.get(isbn);
 
   if (!book) {
     return await null;
