@@ -27,6 +27,7 @@
     "@antoniogiroz/eslint-config": "^1.0.0",
     "@commitlint/cli": "^17.5.1",
     "@commitlint/config-conventional": "^17.4.4",
+    "@ngneat/falso": "^6.4.0",
     "@playwright/test": "^1.32.1",
     "@testing-library/dom": "^9.0.1",
     "@testing-library/jest-dom": "^5.16.5",

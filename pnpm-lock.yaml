@@ -4,6 +4,7 @@ specifiers:
   '@antoniogiroz/eslint-config': ^1.0.0
   '@commitlint/cli': ^17.5.1
   '@commitlint/config-conventional': ^17.4.4
+  '@ngneat/falso': ^6.4.0
   '@playwright/test': ^1.32.1
   '@testing-library/dom': ^9.0.1
   '@testing-library/jest-dom': ^5.16.5
@@ -46,6 +47,7 @@ devDependencies:
   '@antoniogiroz/eslint-config': 1.0.0_ip5up2nocltd47wbnuyybe5dxu
   '@commitlint/cli': 17.5.1
   '@commitlint/config-conventional': 17.4.4
+  '@ngneat/falso': 6.4.0
   '@playwright/test': 1.32.1
   '@testing-library/dom': 9.0.1
   '@testing-library/jest-dom': 5.16.5
@@ -1050,6 +1052,13 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.14
+    dev: true
+
+  /@ngneat/falso/6.4.0:
+    resolution: {integrity: sha512-f6r036h2fX/AoHw1eV2t8+qWQwrbSrozs3zXMhhwoO7SJBc+DGMxRWEhFeYIinfwx0uhUH8ggx5+PDLzYESLOA==}
+    dependencies:
+      seedrandom: 3.0.5
+      uuid: 8.3.2
     dev: true
 
   /@nodelib/fs.scandir/2.1.5:
@@ -5812,6 +5821,10 @@ packages:
     resolution: {integrity: sha512-4AsO/FrViE/iDNEPaAQlb77tf0csuq27EsVpy6ett584EcRTp6pTDLoGWVxCD77y5iU5FauOvhsI4o1APwPoSQ==}
     dev: true
 
+  /seedrandom/3.0.5:
+    resolution: {integrity: sha512-8OwmbklUNzwezjGInmZ+2clQmExQPvomqjL7LFqOYqtmuxRgQYqOD3mHaU+MvZn5FLUeVxVfQjwLZW/n/JFuqg==}
+    dev: true
+
   /semver/5.7.1:
     resolution: {integrity: sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==}
     hasBin: true
@@ -6580,6 +6593,11 @@ packages:
 
   /util-deprecate/1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
+    dev: true
+
+  /uuid/8.3.2:
+    resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
+    hasBin: true
     dev: true
 
   /v8-compile-cache-lib/3.0.1:
