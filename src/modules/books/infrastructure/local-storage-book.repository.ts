@@ -4,13 +4,13 @@ import type { BookRepository } from '../domain/book.repository';
 async function save(book: Book): Promise<void> {
   const books = getAllFromLocalStorage();
 
-  books.set(book.isbn, book);
+  books.set(book.id, book);
   localStorage.setItem('books', JSON.stringify(Array.from(books.entries())));
 }
 
-async function get(isbn: string): Promise<Book | null> {
+async function get(id: string): Promise<Book | null> {
   const books = getAllFromLocalStorage();
-  const book = books.get(isbn);
+  const book = books.get(id);
 
   if (!book) {
     return await null;

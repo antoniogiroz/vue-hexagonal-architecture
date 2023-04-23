@@ -12,7 +12,7 @@ const { books, isLoading } = useBooks();
 
   <div v-if="isLoading">Loading...</div>
 
-  <div v-for="book in books" :key="book.isbn">
+  <div v-for="book in books" :key="book.id">
     <img :src="book.coverImageUrl" :alt="`Cover of book ${book.title}`" height="100" />
     <h2>{{ book.title }}</h2>
     <p>{{ book.author }}</p>
