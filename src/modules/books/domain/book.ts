@@ -10,6 +10,7 @@ export interface Book {
   author: string;
   coverImageUrl: string;
   readingStatus: ReadingStatus;
+  lastReadAt?: Date;
 }
 
 export function validateBookOrFail({ id, title, coverImageUrl }: Book): void {

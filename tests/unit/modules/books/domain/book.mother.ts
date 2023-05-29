@@ -1,10 +1,10 @@
-import { randFullName, randImg, randText, randTextRange, randUuid } from '@ngneat/falso';
+import { randFullName, randImg, randPastDate, randText, randTextRange, randUuid } from '@ngneat/falso';
 import { Factory } from 'fishery';
 import type { Book, ReadingStatus } from '@/modules/books/domain/book';
 import { TITLE_MAX_LENGTH, TITLE_MIN_LENGTH } from '@/modules/books/domain/book-title';
 
 function randBookReadingStatus(): ReadingStatus {
-  const readingStatus: ReadingStatus[] = ['ToRead', 'Reading', 'Read', 'Abandoned'];
+  const readingStatus: ReadingStatus[] = ['ToRead', 'Reading', 'Read', 'Abandoned', 'OnHold'];
   const randomIndex = Math.floor(Math.random() * readingStatus.length);
 
   return readingStatus[randomIndex];
@@ -16,6 +16,7 @@ const BookFactory = Factory.define<Book>(() => ({
   author: randFullName(),
   coverImageUrl: randImg(),
   readingStatus: randBookReadingStatus(),
+  lastReadAt: randPastDate(),
 }));
 
 export const BookMother = {

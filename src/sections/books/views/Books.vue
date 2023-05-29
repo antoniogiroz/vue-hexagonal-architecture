@@ -17,5 +17,6 @@ const { books, isLoading } = useBooks();
     <h2>{{ book.title }}</h2>
     <p>{{ book.author }}</p>
     <p>{{ book.readingStatus }}</p>
+    <p>{{ book.lastReadAt }}</p>
   </div>
 </template>

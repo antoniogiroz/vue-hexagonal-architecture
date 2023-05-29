@@ -1,5 +1,6 @@
 import type { Book } from '../domain/book';
 import type { BookRepository } from '../domain/book.repository';
+import type { BookDto } from './book.dto';
 
 async function save(book: Book): Promise<void> {
   const books = getAllFromLocalStorage();
@@ -32,7 +33,16 @@ function getAllFromLocalStorage(): Map<string, Book> {
     return new Map();
   }
 
-  return new Map(JSON.parse(books) as Iterable<[string, Book]>);
+  const booksDtos = new Map(JSON.parse(books) as Iterable<[string, BookDto]>);
+
+  return new Map(Array.from(booksDtos.entries()).map(([id, bookDto]) => [id, mapToDomain(bookDto)]));
+}
+
+function mapToDomain(bookDto: BookDto): Book {
+  return {
+    ...bookDto,
+    lastReadAt: bookDto.lastReadAt ? new Date(bookDto.lastReadAt) : undefined,
+  };
 }
 
 export function createLocalStorageBookRepository(): BookRepository {
