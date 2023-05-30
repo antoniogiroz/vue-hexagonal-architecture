@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useRepositoryContexts } from './use-repository-contexts';
+import { useRepositoryContexts } from './core/composables/use-repository-contexts';
 
 useRepositoryContexts();
 </script>

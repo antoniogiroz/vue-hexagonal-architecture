@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 import { render, screen } from '~/unit';
-import MyComponent from '@/components/HelloWorld.vue';
+import HelloWorld from '@/core/components/HelloWorld.vue';
 
 describe('HelloWorld.vue', () => {
   test('should render correctly with props', async () => {
@@ -8,7 +8,7 @@ describe('HelloWorld.vue', () => {
       msg: 'Hello, World!',
     };
 
-    render(MyComponent, {
+    render(HelloWorld, {
       props,
     });
 

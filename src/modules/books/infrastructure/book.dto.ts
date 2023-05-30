@@ -1,4 +1,4 @@
-export type ReadingStatus = 'ToRead' | 'Reading' | 'Read' | 'Abandoned' | 'OnHold';
+import type { ReadingStatus } from '../domain/book-reading-status';
 
 export interface BookDto {
   id: string;

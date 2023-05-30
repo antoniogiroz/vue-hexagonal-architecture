@@ -1,10 +1,10 @@
 import { describe, expect, test } from 'vitest';
 import { render, screen } from '~/unit';
 import { BookMother } from '~/unit/modules/books/domain/book.mother';
-import { createLocalStorageBookRepository } from '@/modules/books/infrastructure/local-storage-book.repository';
+import { createBookLocalStorageRepository } from '@/modules/books/infrastructure/book-local-storage.repository';
 import Books from '@/sections/books/views/Books.vue';
 
-const BookRepository = createLocalStorageBookRepository();
+const BookRepository = createBookLocalStorageRepository();
 
 describe('Books.vue', () => {
   test('should render correctly with props', async () => {

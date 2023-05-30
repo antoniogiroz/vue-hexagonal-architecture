@@ -1,6 +1,7 @@
 import { randFullName, randImg, randPastDate, randText, randTextRange, randUuid } from '@ngneat/falso';
 import { Factory } from 'fishery';
-import type { Book, ReadingStatus } from '@/modules/books/domain/book';
+import type { Book } from '@/modules/books/domain/book';
+import type { ReadingStatus } from '@/modules/books/domain/book-reading-status';
 import { TITLE_MAX_LENGTH, TITLE_MIN_LENGTH } from '@/modules/books/domain/book-title';
 
 function randBookReadingStatus(): ReadingStatus {

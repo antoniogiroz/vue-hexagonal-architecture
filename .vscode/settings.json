@@ -4,5 +4,8 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
     "source.fixAll.stylelint": true
+  },
+  "[javascript][typescript][vue]": {
+    "editor.codeActionsOnSave": ["source.addMissingImports", "source.fixAll.eslint"]
   }
 }

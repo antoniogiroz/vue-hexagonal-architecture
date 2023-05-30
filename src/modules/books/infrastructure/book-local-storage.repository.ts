@@ -45,7 +45,7 @@ function mapToDomain(bookDto: BookDto): Book {
   };
 }
 
-export function createLocalStorageBookRepository(): BookRepository {
+export function createBookLocalStorageRepository(): BookRepository {
   return {
     save,
     get,
